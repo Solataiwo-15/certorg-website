@@ -1,0 +1,35 @@
+/* src/components/Footer.module.css */
+
+.footer {
+  background-color: #000;
+  padding: 20px 0;
+  color: #888;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerLogo {
+  width: 60px;
+  opacity: 0.8;
+}
+
+.copyright {
+  font-size: 0.9rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .footerLogo {
+  display: none;
+}
+  .footerContainer {
+    flex-direction: column;
+  }
+  .copyright {
+    text-align: center;
+  }
+}

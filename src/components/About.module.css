@@ -1,0 +1,103 @@
+/* src/components/About.module.css */
+
+.aboutSection {
+  background-color: var(--primary-white);
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* --- Column 1: Text Content --- */
+.textContent {
+  flex: 1;
+  padding-right: 40px;
+  z-index: 2; /* Ensures text is on top if overlap happens */
+}
+
+.headline {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.bodyText {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Column 2: Visual Element --- */
+.visualContent {
+  flex: 1;
+  position: relative;
+}
+
+.visualBox {
+  width: 100%;
+  height: 500px; /* Give it a fixed, generous height */
+  border-radius: 8px;
+  position: relative;
+  transform: translateX(-60px);
+  overflow: hidden; /* This is critical for containing the image */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Adds depth */
+}
+
+/* --- The new image styling --- */
+.aboutImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ESSENTIAL: Covers the area without stretching */
+  transition: transform 0.4s ease;
+  filter: grayscale(20%); /* Desaturates slightly for a more professional look */
+}
+
+.visualBox:hover .aboutImage {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+.accentShape {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background-color: var(--accent-green);
+  border-radius: 8px;
+  background-image: linear-gradient(45deg, var(--accent-green) 0%, #00c96e 100%);
+  z-index: 2; /* Make sure it sits on top of the image */
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 992px) {
+  .visualBox {
+    transform: translateX(0); /* Removes overlap on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 60px 0;
+  }
+  .aboutContainer {
+    flex-direction: column;
+  }
+  .textContent {
+    padding-right: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .visualBox {
+    height: 350px;
+  }
+}

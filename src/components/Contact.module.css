@@ -1,0 +1,143 @@
+/* src/components/Contact.module.css */
+
+.contactSection {
+  background-color: var(--primary-light-gray);
+  padding: 100px 0;
+}
+
+.contactContainer {
+  display: flex;
+  gap: 60px;
+}
+
+/* --- Column 1: Information --- */
+.infoColumn {
+  flex: 1;
+}
+
+.headline {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.subheadline {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactItem:hover {
+  color: var(--accent-green);
+}
+
+.icon {
+  color: var(--accent-green);
+  font-size: 1.2rem;
+}
+
+/* --- Column 2: Form --- */
+.formColumn {
+  flex: 1;
+}
+
+.contactForm {
+  background-color: var(--primary-white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.inputGroup label {
+  display: block;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 95%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: var(--accent-green);
+  box-shadow: 0 0 0 3px rgba(0, 169, 92, 0.2);
+}
+
+.errorMessage {
+  color: #d93025; /* A standard error red color */
+  font-size: 0.875rem;
+  margin-top: 5px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* Style for the input field when it has an error */
+.inputError {
+  border-color: #d93025 !important; /* Use !important to override focus styles if needed */
+}
+
+.inputError:focus {
+  box-shadow: 0 0 0 4px rgba(217, 48, 37, 0.1) !important;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 18px;
+  background-color: var(--accent-green);
+  color: var(--primary-white);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: #008a4a;
+  transform: translateY(-2px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+}

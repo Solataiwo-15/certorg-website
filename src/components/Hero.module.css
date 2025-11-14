@@ -1,0 +1,126 @@
+/* src/components/Hero.module.css */
+
+/* 1. THE CONTAINER: Fixes the white space issue and adds depth */
+.heroWrapper {
+  position: relative;
+  width: 100%; /* Forces full width */
+  height: 100vh; /* Forces full viewport height */
+  /* Premium Gradient: Dark center, pure black edges */
+  background: radial-gradient(circle at center, #1e2422 0%, #050505 100%); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents scrollbars if animations go wild */
+}
+
+/* 2. THE PATTERN: Adds a subtle 'financial grid' texture */
+.patternOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px; /* Size of the grid squares */
+  z-index: 1;
+  mask-image: radial-gradient(circle, black 40%, transparent 80%); /* Fades grid out at edges */
+  -webkit-mask-image: radial-gradient(circle, black 40%, transparent 80%);
+}
+
+/* 3. THE CONTENT: Z-index ensures it sits on top of the pattern */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out forwards; /* Smooth entry animation */
+}
+
+.logoContainer {
+    margin-bottom: 2.5rem;
+}
+
+.logo {
+  width: 180px; 
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1)); /* Subtle glow on logo */
+}
+
+.headline {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1.5px;
+}
+
+/* Makes 'Energy Sector' stand out with a gradient text effect */
+.highlight {
+  background: linear-gradient(90deg, #ffffff 0%, #00A95C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.subheadline {
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  color: #b0b0b0; /* Softer gray for better readability against dark bg */
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.ctaButton {
+  font-family: var(--font-body);
+  background-color: var(--accent-green);
+  color: #ffffff;
+  border: none;
+  padding: 18px 45px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 50px; /* Rounded pill shape looks more modern */
+  box-shadow: 0 0 20px rgba(0, 169, 92, 0.4); /* Green Glow Effect */
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 40px rgba(0, 169, 92, 0.7); /* Stronger glow on hover */
+  background-color: #00c96e;
+}
+
+/* 4. ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 5. MOBILE TWEAKS */
+@media (max-width: 768px) {
+  .headline {
+    font-size: 2.8rem;
+  }
+  .subheadline {
+    font-size: 1.1rem;
+  }
+  .ctaButton {
+    width: 100%; /* Full width button on phone */
+    padding: 20px;
+  }
+}

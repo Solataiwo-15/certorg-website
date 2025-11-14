@@ -1,0 +1,39 @@
+/* src/App.css */
+
+/* 
+  --- Font Setup --- 
+  Ensure the Lato font link is in your public/index.html file's <head> tag.
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+*/
+
+/* --- CSS Variables & Global Styles --- */
+:root {
+  --primary-dark: #121212;
+  --primary-white: #FFFFFF;
+  --primary-light-gray: #f4f4f4;
+  --text-dark: #1c1c1c;
+  --text-light: #e0e0e0;
+  --accent-green: #00A95C;
+
+  /* --- FONT CHANGE HERE --- */
+  --font-heading: 'Lato', sans-serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0; /* Add this */
+  width: 100%; /* Add this */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  font-family: var(--font-body);
+  background-color: var(--primary-dark); /* Change background to dark to match hero */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Utility Classes --- */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
