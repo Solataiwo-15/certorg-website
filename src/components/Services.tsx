@@ -1,6 +1,5 @@
 // src/components/Services.tsx
 
-import React from "react";
 import styles from "./Services.module.css";
 
 // 1. Import the specific icons we need from the library

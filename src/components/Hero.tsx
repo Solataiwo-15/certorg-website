@@ -1,6 +1,4 @@
 // src/components/Hero.tsx
-
-import React from "react";
 import styles from "./Hero.module.css";
 import logoWhite from "../assets/certorg-logo-white.svg";
 

@@ -1,6 +1,5 @@
 // src/components/About.tsx
 
-import React from "react";
 import styles from "./About.module.css";
 import aboutImage from "../assets/about-image.jpg"; // 1. Import the image
 
