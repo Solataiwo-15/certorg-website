@@ -3,7 +3,6 @@
 import React, { useState } from "react"; // 1. Import useState
 import styles from "./Contact.module.css";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
-import { FiArrowRight } from "react-icons/fi";
 import SuccessModal from "./SuccessModal";
 
 // Define a type for our form data for TypeScript
@@ -178,7 +177,6 @@ const Contact = () => {
 
               <button type="submit" className={styles.submitButton}>
                 Submit Enquiry
-                <FiArrowRight className={styles.buttonIcon} />
               </button>
             </form>
           </div>
