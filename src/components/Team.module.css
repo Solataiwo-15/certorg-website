@@ -52,4 +52,28 @@
     flex-direction: column;
     gap: 40px;
   }
+  .teamSection {
+  background-color: var(--background-light);
+  padding: 10px 0;
+  text-align: center;
+}
+
+  .headline {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary-dark-blue);
+  margin-bottom: 40px;
+}
+.memberName {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  margin: 0 0 0.5rem 0;
+}
+
+.memberTitle {
+  font-size: 1rem;
+  color: var(--primary-dark-blue);
+  margin: 0;
+}
 }

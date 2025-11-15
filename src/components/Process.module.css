@@ -127,13 +127,21 @@
     margin-bottom: 30px;
   }
 
+  .headline {
+  font-family: var(--font-main);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-dark-blue);
+  margin-bottom: 40px;
+}
+
   /* Reduce font sizes for a cleaner look */
   .stepNumber {
     font-size: 1.5rem; 
   }
 
   .stepText {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .imageWrapper {

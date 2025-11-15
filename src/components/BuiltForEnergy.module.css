@@ -27,7 +27,7 @@
 
 .textColumn {
   /* The text column will occupy the second grid area */
-  padding-right: 13%; /* Adds some space on the right edge */
+  padding-right: 0; /* Adds some space on the right edge */
 }
 
 .headline {
@@ -86,13 +86,14 @@
 
   /* Keep the main headline centered as it looks better */
   .headline {
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
   }
   
   .featuresList li {
     padding-left: 30px; /* Restore padding for bullets */
     text-align: left; /* Keep list items left-aligned */
+    font-size: 1rem;
   }
   
   .featuresList li::before {

@@ -99,7 +99,22 @@
   /* We keep the headline centered on mobile as it looks better */
   .headline {
     text-align: center;
+    font-size: 2rem;
   }
+
+  .solutionsList strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  margin-bottom: 0.25rem;
+}
+
+.solutionsList p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
 
   .solutionsList li {
     /* We keep the padding and left-alignment for the list items */
