@@ -1,6 +1,3 @@
-// src/components/BuiltForEnergy.tsx
-
-import React from "react";
 import styles from "./BuiltForEnergy.module.css";
 import energyIndustry from "../assets/images/energy-industry.png";
 

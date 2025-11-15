@@ -1,6 +1,3 @@
-// src/components/OurSolutions.tsx
-
-import React from "react";
 import styles from "./OurSolutions.module.css";
 import solutionsMoney from "../assets/images/solutions-money.png";
 

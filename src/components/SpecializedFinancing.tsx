@@ -1,6 +1,3 @@
-// src/components/SpecializedFinancing.tsx
-
-import React from "react";
 import styles from "./SpecializedFinancing.module.css";
 import financingHand from "../assets/images/financing-hand.png";
 

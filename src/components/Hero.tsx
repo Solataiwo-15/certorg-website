@@ -1,6 +1,3 @@
-// src/components/Hero.tsx
-
-import React from "react";
 import styles from "./Hero.module.css";
 import heroBg from "../assets/images/hero-background.jpg";
 

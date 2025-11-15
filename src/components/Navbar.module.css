@@ -75,7 +75,7 @@
 
   .navLinks ul {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     gap: 40px;
   }
 
