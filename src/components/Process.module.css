@@ -1,0 +1,142 @@
+/* src/components/Process.module.css */
+
+.processSection {
+  background-color: white;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.headline {
+  font-family: var(--font-main);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--primary-dark-blue);
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: var(--accent-orange);
+}
+
+/* 
+  =======================================================
+  THE FIX: This is our new full-bleed container.
+  =======================================================
+*/
+.graphicContainer {
+  position: relative;
+  width: 100vw; /* 100% of the Viewport Width */
+  left: 50%;
+  transform: translateX(-50%); /* This centers the full-width container */
+  max-width: 1400px; /* Optional: cap the max size on huge screens */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+/* --- Positioning the Steps --- */
+
+.step {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 280px;
+}
+
+.stepNumber {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.stepText {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-dark-blue);
+  text-align: left;
+}
+
+/* New percentages based on the full-bleed layout */
+.step1 {
+  top: 3%;
+  left: 68%;
+}
+.step1 .stepNumber { color: var(--accent-orange); }
+
+.step2 {
+  top: 50%;
+  right: 68%;
+  transform: translateY(-50%);
+  text-align: left;
+}
+.step2 .stepNumber { color: var(--accent-orange); }
+
+.step3 {
+  bottom: 19%;
+  left: 68%;
+}
+.step3 .stepNumber { color: var(--accent-orange); }
+
+
+/* --- CTA Button --- */
+.ctaWrapper {
+  margin-top: 50px;
+}
+
+.ctaButton {
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent-orange);
+  color: var(--accent-orange);
+}
+
+.ctaButton:hover {
+  background-color: var(--accent-orange);
+  color: var(--primary-white);
+}
+
+
+/* --- [THE FIX IS HERE] Corrected Mobile Styles --- */
+@media (max-width: 992px) {
+  .processSection {
+    background-color: white;
+    padding: 70px 0;
+    text-align: center;
+  }
+
+  .graphicContainer {
+    width: 100%;
+    position: static;
+    transform: none;
+    left: auto;
+  }
+  
+  .step {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding-left: 20px;
+    margin-top: 20px;
+    /* This will align the content to the start (left) of the flex container */
+    justify-content: flex-start; 
+    margin-bottom: 30px;
+  }
+
+  /* Reduce font sizes for a cleaner look */
+  .stepNumber {
+    font-size: 1.5rem; 
+  }
+
+  .stepText {
+    font-size: 1.1rem;
+  }
+
+  .imageWrapper {
+    margin: 40px 0;
+  }
+}

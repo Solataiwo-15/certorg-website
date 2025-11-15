@@ -1,48 +1,41 @@
 /* src/App.css */
 
-/* 
-  --- Font Setup --- 
-  Ensure the Lato font link is in your public/index.html file's <head> tag.
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
-*/
-
-/* --- CSS Variables & Global Styles --- */
+/* --- The Global Box Model Fix (Always keep this) --- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* --- [NEW] Design System Variables from Figma --- */
 :root {
-  --primary-dark: #121212;
+  --primary-dark-blue: #0B2545;
+  --accent-orange: #E07A5F;
+  --background-light: #F8F9FA;
+  --text-primary: #0B2545;
+  --text-secondary: #495057;
   --primary-white: #FFFFFF;
-  --primary-light-gray: #f4f4f4;
-  --text-dark: #1c1c1c;
-  --text-light: #e0e0e0;
-  --accent-green: #00A95C;
 
-  /* --- FONT CHANGE HERE --- */
-  --font-heading: 'Lato', sans-serif;
-  --font-body: 'Lato', sans-serif;
+  --font-main: 'Manrope', sans-serif;
 }
 
 body {
   margin: 0;
-  padding: 0; /* Add this */
-  width: 100%; /* Add this */
-  overflow-x: hidden; /* Prevents horizontal scroll */
-  font-family: var(--font-body);
-  background-color: var(--primary-dark); /* Change background to dark to match hero */
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-main);
+  background-color: var(--primary-white);
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- Utility Classes --- */
+/* --- [NEW] Master Layout Container --- */
+/* We will use this in every section */
 .container {
   width: 90%;
-  max-width: 1100px;
-  
-  /* THIS IS THE CRITICAL LINE THAT CENTERS EVERYTHING */
+  max-width: 1140px; /* A standard max-width for modern sites */
   margin-left: auto;
   margin-right: auto;
 }

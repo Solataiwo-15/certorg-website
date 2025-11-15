@@ -1,0 +1,108 @@
+/* src/components/BuiltForEnergy.module.css */
+
+.energySection {
+  background-color: var(--background-light);
+  padding-bottom: 70px;
+  overflow: hidden;
+
+  /* --- [THE NEW GRID LAYOUT] --- */
+  display: grid;
+  /* Swapped the column order to have the image on the left */
+  grid-template-columns: 1fr minmax(auto, 600px); 
+  align-items: center;
+  gap: 40px;
+}
+
+.imageColumn {
+  position: relative;
+  /* [THE FIX] Negative margin pulls the image to the left, making it bleed off-screen */
+  display: flex;
+  margin-left: -5%;
+}
+
+.image {
+  max-width: 85%;
+  height: auto;
+}
+
+.textColumn {
+  /* The text column will occupy the second grid area */
+  padding-right: 13%; /* Adds some space on the right edge */
+}
+
+.headline {
+  font-family: var(--font-main);
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--primary-dark-blue);
+  margin: 0 0 2rem 0;
+}
+
+.highlight {
+  color: var(--accent-orange);
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featuresList li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.featuresList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 12px;
+  height: 12px;
+  /* [THE FIX] Changed from dark blue to accent orange */
+  background-color: var(--accent-orange); 
+  border-radius: 50%;
+}
+
+
+/* --- [THE FIX IS HERE] Corrected Mobile Styles --- */
+@media (max-width: 992px) {
+  .energySection {
+    grid-template-columns: 1fr; 
+    padding: 60px 20px;
+  }
+
+  .textColumn {
+    text-align: left; /* Keep text block left-aligned */
+    order: 2;
+    width: 100%;
+  }
+
+  /* Keep the main headline centered as it looks better */
+  .headline {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  
+  .featuresList li {
+    padding-left: 30px; /* Restore padding for bullets */
+    text-align: left; /* Keep list items left-aligned */
+  }
+  
+  .featuresList li::before {
+    display: block; /* Show bullet points */
+  }
+
+  .imageColumn {
+    order: 1;
+    margin-bottom: 40px;
+    margin-left: 0; /* Reset the bleed effect */
+    justify-content: center; /* Center the image horizontally */
+  }
+}

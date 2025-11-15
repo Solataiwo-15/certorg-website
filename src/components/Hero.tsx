@@ -1,40 +1,45 @@
 // src/components/Hero.tsx
+
+import React from "react";
 import styles from "./Hero.module.css";
-import logoWhite from "../assets/certorg-logo-white.svg";
+import heroBg from "../assets/images/hero-background.jpg";
 
 const Hero = () => {
-  // 1. Define the handler function
-  const handleScrollToContact = () => {
-    const contactSection = document.getElementById("contact-section");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
   return (
-    <section className={styles.heroWrapper}>
-      <div className={styles.patternOverlay}></div>
+    <section className={styles.heroSection}>
+      <img
+        src={heroBg}
+        alt="Oil rig at dusk"
+        className={styles.backgroundImage}
+      />
+      <div className={styles.overlay}></div>
 
-      <div className={styles.heroContent}>
-        <div className={styles.logoContainer}>
-          <img src={logoWhite} alt="CertOrg Logo" className={styles.logo} />
-        </div>
+      {/* 
+        ===========================================================
+        THE FIX IS HERE: We have separated the container and content.
+        ===========================================================
+      */}
 
-        <h1 className={styles.headline}>
-          Powering Ambition in the <br />
-          <span className={styles.highlight}>Energy Sector.</span>
-        </h1>
-
-        <p className={styles.subheadline}>
-          CertOrg delivers specialized credit facilities for oil and gas
-          contracts, turning your opportunities into operational success.
-        </p>
-
-        <div className={styles.buttonWrapper}>
-          {/* 2. Add the onClick event to the button */}
-          <button className={styles.ctaButton} onClick={handleScrollToContact}>
-            Enquire Now
-          </button>
+      {/* This outer div sets the max-width and aligns the whole block */}
+      <div className="container">
+        {/* This inner div holds the actual text and buttons */}
+        <div className={styles.heroContent}>
+          <h1 className={styles.headline}>
+            <span className={styles.highlight}>Empowering</span> your growth in
+            the oil & gas Sector
+          </h1>
+          <p className={styles.subheadline}>
+            Tailored credit facilities that support your contracts, strengthen
+            operations, and move your projects forward seamlessly.
+          </p>
+          <div className={styles.buttonGroup}>
+            <a href="#financing" className={styles.ctaButtonPrimary}>
+              Get financing support
+            </a>
+            <a href="#consultation" className={styles.ctaButtonSecondary}>
+              Book consultation
+            </a>
+          </div>
         </div>
       </div>
     </section>

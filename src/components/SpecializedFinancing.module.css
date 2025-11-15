@@ -1,0 +1,77 @@
+/* src/components/SpecializedFinancing.module.css */
+
+.financingSection {
+  background-color: var(--background-light);
+  padding-top: 80px;
+  overflow: hidden;
+
+  /* --- [THE NEW GRID LAYOUT] --- */
+  display: grid;
+  /* Defines two columns. The first takes up half the screen. 
+     The second is flexible but capped at a max-width for our text content. */
+  grid-template-columns: 1fr minmax(auto, 600px); 
+  align-items: center;
+  gap: 40px; /* Space between the image and text columns */
+}
+
+.imageColumn {
+  /* The image column will naturally fill its grid area */
+  position: relative;
+  /* Negative margin pulls the image to the left, making it bleed off-screen */
+  margin-left: -5%; 
+}
+
+.image {
+  max-width: 85%;
+  height: auto;
+}
+
+.textColumn {
+  /* The text column will occupy the second grid area */
+  padding-right: 13%; /* Adds some space on the right edge */
+}
+
+.headline {
+  font-family: var(--font-main);
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--primary-dark-blue);
+  margin: 0 0 1.5rem 0;
+}
+
+.highlight {
+  color: var(--accent-orange);
+}
+
+.bodyText {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* --- Mobile Styles --- */
+@media (max-width: 992px) {
+  .financingSection {
+    /* Stack the grid items on mobile */
+    grid-template-columns: 1fr; 
+    padding: 60px 20px; /* Add horizontal padding for mobile */
+  }
+
+  .textColumn {
+    text-align: center;
+    order: 2; /* Text comes after image */
+    padding-right: 0;
+  }
+
+  .imageColumn {
+    order: 1; /* Image comes first */
+    margin-bottom: 40px;
+    margin-left: 0; /* Reset the negative margin */
+  }
+
+  .headline {
+    font-size: 2.2rem;
+  }
+}
