@@ -24,19 +24,19 @@ const Navbar = () => {
         >
           <ul>
             <li>
-              <a href="#about">About</a>
+              <a href="mailto:info@certorg.com">About</a>
             </li>
             <li>
-              <a href="#offerings">Offerings</a>
+              <a href="mailto:info@certorg.com">Offerings</a>
             </li>
             <li>
-              <a href="#why-choose-us">Why choose us</a>
+              <a href="mailto:info@certorg.com">Why choose us</a>
             </li>
             <li>
-              <a href="#how-it-works">How it works</a>
+              <a href="mailto:info@certorg.com">How it works</a>
             </li>
             <li>
-              <a href="#testimonials">Testimonials</a>
+              <a href="mailto:info@certorg.com">Testimonials</a>
             </li>
           </ul>
         </nav>

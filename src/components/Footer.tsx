@@ -17,9 +17,9 @@ const Footer = () => {
             <img src={logo} alt="CertOrg Logo" className={styles.footerLogo} />
           </div>
           <div className={styles.linksColumn}>
-            <a href="#contact">Contact details</a>
-            <a href="#socials">Social links</a>
-            <a href="#compliance">Compliance</a>
+            <a href="mailto:info@certorg.com">Contact details</a>
+            <a href="mailto:info@certorg.com">Social links</a>
+            <a href="mailto:info@certorg.com">Compliance</a>
           </div>
         </div>
 
