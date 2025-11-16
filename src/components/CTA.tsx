@@ -13,12 +13,15 @@ const CTA = () => {
         </h2>
 
         <div className={styles.buttonGroup}>
-          <a href="#financing-today" className={styles.ctaButtonPrimary}>
+          <a
+            href="mailto:certorg.io@gmail.com"
+            className={styles.ctaButtonPrimary}
+          >
             Apply for Financing Today
           </a>
-          <a href="tel:+2347017653091" className={styles.ctaButtonSecondary}>
+          {/* <a href="tel:+2347017653091" className={styles.ctaButtonSecondary}>
             Call us (+2347017653091)
-          </a>
+          </a> */}
         </div>
       </div>
 

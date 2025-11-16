@@ -30,10 +30,16 @@ const Hero = () => {
             operations, and move your projects forward seamlessly.
           </p>
           <div className={styles.buttonGroup}>
-            <a href="#financing" className={styles.ctaButtonPrimary}>
+            <a
+              href="mailto:certorg.io@gmail.com"
+              className={styles.ctaButtonPrimary}
+            >
               Get financing support
             </a>
-            <a href="#consultation" className={styles.ctaButtonSecondary}>
+            <a
+              href="mailto:certorg.io@gmail.com"
+              className={styles.ctaButtonSecondary}
+            >
               Book consultation
             </a>
           </div>

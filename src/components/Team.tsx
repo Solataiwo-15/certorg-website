@@ -1,6 +1,6 @@
 import styles from "./Team.module.css";
 import teamMale from "../assets/images/team-male.png";
-import teamFemale from "../assets/images/team-female.png";
+// import teamFemale from "../assets/images/team-female.png";
 
 const Team = () => {
   return (
@@ -20,7 +20,7 @@ const Team = () => {
           </div>
 
           {/* Team Member 2 */}
-          <div className={styles.teamMember}>
+          {/* <div className={styles.teamMember}>
             <img
               src={teamFemale}
               alt="Damola Samson"
@@ -28,7 +28,7 @@ const Team = () => {
             />
             <h3 className={styles.memberName}>Damola Samson</h3>
             <p className={styles.memberTitle}>COO/ Co-founder</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

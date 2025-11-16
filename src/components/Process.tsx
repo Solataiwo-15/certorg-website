@@ -41,7 +41,7 @@ const Process = () => {
       {/* This container is ONLY for the centered button */}
       <div className="container">
         <div className={styles.ctaWrapper}>
-          <a href="#start-application" className={styles.ctaButton}>
+          <a href="mailto:certorg.io@gmail.com" className={styles.ctaButton}>
             Start your application today
           </a>
         </div>
